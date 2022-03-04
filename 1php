@@ -1,0 +1,90 @@
+<?php
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="inx.php"></form>
+Birth Year:
+<input list="birth_year" name="year_born">
+    <datalist id="birth_year">
+        <?php 
+          $right_now = getdate();
+          $this_year = $right_now['year'];
+          $start_year = 2000;
+          while ($start_year <= $this_year) {
+              echo "<option>{$start_year}</option>";
+              $start_year++;
+          }
+         ?>
+     </datalist>
+</input>
+Birth month:
+<select>
+    <option>
+        JANAUARY
+        </option>
+        <option>
+        FEBRUARY
+        </option>
+        <option>
+        MARCH
+        </option>
+        <option>
+        APRIL
+        </option>
+        <option>
+        MAY
+        </option>
+        <option>
+        JUNE
+        </option>
+        <option>
+        JULY
+        </option>
+        <option>
+        AUGUST
+        </option>
+        <option>
+        SEPTEMBER
+        </option>
+        <option>
+       OCTOBER
+        </option>
+        <option>
+        NOVEMBER
+        </option>
+        <option>
+        DECEMBER
+        </option>
+        </select>
+    BIRTH DATE:
+
+    <input list="birth_date" name="birth_date">
+    <datalist id="birth_date">
+        <?php 
+          $right_now = getdate();
+          $this_date = $right_now['year'];
+          $start_date = 1;
+          while ($start_date <= 30) {
+              echo "<option>{$start_date}</option>";
+              $start_date++;
+          }
+         ?>
+     </datalist>
+
+    
+    
+    
+    
+    
+
+
+</body>
+</html>
