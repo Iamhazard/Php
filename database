@@ -1,0 +1,25 @@
+create database indreni
+use indreni
+
+
+create table EmployeeTbl
+(
+EID int primary key,
+EName varchar(50) not null,
+EPhone varchar(10) not null unique,
+EAdd varchar(50) not null,
+ESalary int not null,
+Check(ESalary>15000)
+);
+insert into EmployeeTbl(EID,EName,EPhone,EAdd,ESalary)values(1,'Ram','984563146','BNP','20000')
+insert into EmployeeTbl(EID,EName,EPhone,EAdd,ESalary)values(2,'Shyam','984563456','KTM','25000')
+create table DeptTbl
+(
+DeptId int primary key,
+DLocation varchar(50) not null,
+DName varchar(20) not null unique,
+);
+insert into DeptTbl(DeptId,DLocation,DName)values(1,'BNP','Ram')
+insert into DeptTbl(DeptId,DLocation,DName)values(2,'POK','Hari')
+select *from EmployeeTbl
+select *from DeptTbl
